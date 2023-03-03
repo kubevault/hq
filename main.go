@@ -38,7 +38,7 @@ func main() {
 }
 
 func toJSON() error {
-	input, err := ioutil.ReadAll(os.Stdin)
+	input, err := io.ReadAll(os.Stdin)
 	if err != nil {
 		return fmt.Errorf("unable to read from stdin: %s", err)
 	}
@@ -60,7 +60,7 @@ func toJSON() error {
 }
 
 func toHCL() error {
-	input, err := ioutil.ReadAll(os.Stdin)
+	input, err := io.ReadAll(os.Stdin)
 	if err != nil {
 		return fmt.Errorf("unable to read from stdin: %s", err)
 	}
